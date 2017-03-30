@@ -1,0 +1,41 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@import url("https://fonts.googleapis.com/css?family=Kanit");
+
+body {
+	font-family: "Kanit", Helvetica, Arial, sans-serif;
+}
+
+.page-header {
+	background-color: #00c579;
+	background-image: none;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+	font-weight: bold;
+	color: #00c579;
+	color: black;
+}
+
+// Hide button and tagline from header
+.page-header {
+	.btn {
+		display: none;
+	}
+
+	.project-tagline {
+		display: none;
+	}
+}
+
+// Hide maintained by and link to repo
+.site-footer-owner {
+	display: none;
+}
+
+
