@@ -15,7 +15,7 @@ structure of the Diglias service and how to integrate it in the customer environ
 
 ## API Documentation
 
-A good starting point is to get familiar with the different integration points are trough the API documentation. A
+A good starting point is to get familiar with the different integration points are through the API documentation. A
 number of concepts and terms referred to in the remainder of this document is explained in the documentation:
 
 * [EAPI - Authentication and Frontend connect](https://test.diglias.com/doc-rp/eapi.jsp)
@@ -80,7 +80,7 @@ The playground RP has been equipped with the possibility to connect the attribut
 done in two ways.
 
 * **Frontend connect** - Adding the new parameter in the EAPI request. This is the fastest integration choice, this is
-also the only choise in any case where the user is previuosly unknown.
+also the only choice in any case where the user is previuosly unknown to Diglias.
 * **Backend connect** - the application calls an authenticated backend channel over REST adding the attribute to the
 user. User will then be prompted to add the attribute to the Diglias profile.
 
