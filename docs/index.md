@@ -4,102 +4,136 @@ title: 'Diglias Playground'
 
 ## Abstract
 
-Diglias Playground is a set of instructions, documentation and tools that can be used by a Diglias customer during evaluation of the Diglias services. It is not a complete integration instruction. Using the playground it is possible to develop a web application that uses Diglias for authentication and identification of users.
+Diglias Playground is a set of instructions, documentation and tools that can be used by a Diglias customer during
+evaluation of the Diglias services. It is not a complete integration instruction. Using the playground it is possible
+to develop a web application that uses Diglias for authentication and identification of users.
 
 ## Intended Audience
 
-The Diglias Playground is intended primarily for technically minded persons that needs to understand the technical structure of the Diglias service and how to integrate it in the customer environment.
+The Diglias Playground is intended primarily for technically minded persons that needs to understand the technical
+structure of the Diglias service and how to integrate it in the customer environment.
 
 ## API Documentation
 
-A good starting point is to get familiar with the different integration points are trough the EAPI through the API documentation. A number of concepts and terms referred to in the remainder of this document is explained in the documentation:
+A good starting point is to get familiar with the different integration points are through the API documentation. A
+number of concepts and terms referred to in the remainder of this document is explained in the documentation:
 
-* [EAPI - Authentication](https://test.diglias.com/doc-rp/eapi.jsp)
+* [EAPI - Authentication and Frontend connect](https://test.diglias.com/doc-rp/eapi.jsp)
+* [RP Mgmt - Backend connect](https://test.diglias.com/doc-rp/rp-mgmt.jsp)
 
-## Evaluation Android App
+## Install the App
 
-To login to a web application integrated with the playground, the Android version of the Diglias app is used. (The production version is available for Android and iOS devices)
-For the Diglias Playground a specific version of the Diglias app is used, to be able to install the app on a device the following steps needs to be taken.
+<a href="https://itunes.apple.com/us/app/diglias/id956829343?l=sv&ls=1&mt=8" taget="_newApp1"><img src="assets/images/appstore.svg" width="148"></a>
+<a href="https://play.google.com/store/apps/details?id=com.diglias.loginapp" taget="_newApp1"><img src="assets/images/google_play.svg" width="148"></a>
 
-### Request Google+ Membership
 
-The Google+ group “Diglias Playground” can be found here: <https://plus.google.com/communities/114257454961570698089>
-It is a private Google Plus group and membership will have to be requested and granted by Diglias.
-Please note that the Google Account used to request membership should be the same account that later on will be used in the Google Play Store app, when installing the app on a device.
-
-### Enroll In the Test Program
-
-Once granted access to the Google Plus group, enrollment in to the test app program is achived by clicking the following link and followingin the instructions: <https://play.google.com/apps/testing/com.diglias.loginapp.prodtest﻿>
-
-### Install the App
-
-When enrollment in the test program has been completed, the app can be installed on any device using the same Google Account used when enrolling.
-To install the app you can either follow this link with the browser of your device <https://play.google.com/store/apps/details?id=com.diglias.loginapp.prodtest> or
-Open the Play Store App on the device and search for “Diglias Prod Test”.
+To install the app you can either click the icons above in your browser of your device or open the App store or Play
+Store App on the device and search for “Diglias”.
 
 ## Playground Relying Party
 
-To allow evaluation and practical test of the API and the service a test relying party has been set up in a non production environment, hence there is no guaranteed availability of the relying party and it should under no circumstances be used in a production situation.
+To allow evaluation and practical test of the API and the service a test relying party (RP) has been set up in the
+production environment. The RP is the fictitious company ACME Inc.
 
 ### Relying Party Configuration
 
-The playground relying party uses Diglias for authentication and will require the user to submit an e-mail address, a mobile phone number and a verified swedish personal identification number.
+The playground relying party uses Diglias for authentication.
 
-| | Parameter | Value |
-|-|-----------|-------|
-|Customer Id|auth_companyname|playground|
-|Company MAC Key|N/A|LW4eUhQkJfwJGgQU8JCT/g==|
+|                | Parameter       | Value                  |
+|----------------|---------------- |------------------------|
+|Customer Id     |auth_companyname |playground              |
+|Company MAC Key |N/A              |LW4eUhQkJfwJGgQU8JCT/g==|
 
 ### Attributes
 
 The playground relying party will request the following information from users logging in:
 
-|Attribute|Attribute name|Comment|
-|---------|--------------|-------|
-|E-mail address|`email`|Mandatory - unverified
-|Mobile phone number|`mobile`|Mandatory - unverified
-Personal identification Number|`personalIdentificationNumber`|Mandatory - verified
+|Attribute                 |Attribute name      |Comment            |
+|--------------------------|--------------------|-------------------|
+|Fictitious loyalty number |`acme_loyaltyNumber`|Optional - verified
+|Nickname                  |`nickname`          |Mandatory - non-verified
+|Country                   |`c`                 |Mandatory - non-verified
 
-## Emulating a Login
+### API Endpoint
 
-Using the form at <https://prodtest-login.diglias.com/test-eapi/> a login can be emulated. This webform performs an operation that normally would be done by the application integrating Diglias for authentication and identification.
-In the form the CompanyName `playground`, and the key `LW4eUhQkJfwJGgQU8JCT/g==` should be entered. All other values can be kept as default.
+To be able to integrate with the playground the API endpoint (<https://login.diglias.com/main-eapi/begin>) should be
+used. This is necessary for the playground login to work properly with the playground version of the app and the relying
+party configurations.
 
-![alt text](assets/images/test-eapi-form.png "Form for tetsing EAPI")
+## Try Login
 
-The first time a test Diglias tries to login to the playground relying party, the login will be refused. Since the relying party has been configured to request a verified personal identification number, the user will first have to “Level Up” to be able to login.
+Using the form at <https://login.diglias.com/test-eapi/> a login can be emulated. This webform performs an operation
+that normally would be done by the application integrating Diglias for authentication and identification.
 
-## Emulating a Level Up
+In the form the CompanyName `playground`, and the key `LW4eUhQkJfwJGgQU8JCT/g==` should be entered. All other values
+can be kept as default.
 
-To be able to login to the playground relying party, the used Diglias identity needs to have a verified personal identification number. For test purposes, this (a level up) can be achieved by emulating a verification operation. Use the same form (<https://prodtest-login.diglias.com/test-eapi/>) as used when emulating a login and supply the following information:
+<img src="assets/images/test-eapi-form.png" width="75%">
 
-|Company Name|`playgroundAmbassador`
-Key|`5osdC7Gs6OfHdHO9ZB7DaQ==`
-Ambassador|`auth_rp_personalIdentificationNumber=197501015050`
+## Try Connect
 
-The timestamp field will be automatically populated when the Ambassador field is filled out. To minimize the risk of a timeout, fill out the Ambassador field last, and submit the form immediately after.
+In some scenarios, adding an attribute to a user where the RP decides the value is required. This scenario is called a
+`connect`. For example if you join a loyalty program, the RP might want to add the loyalty program number to your
+Diglias profile.
 
-During the level up, the user will be expected to set a PIN in the Diglias app when the personal identification number is appended to the Diglias.
+The playground RP has been equipped with the possibility to connect the attribute `acme_loyaltyNumber` and this can be
+done in two ways.
 
-Once the level up is completed, the user is able to login to the playground relying party.
+* **Frontend connect** - Adding the new parameter in the EAPI request. This is the fastest integration choice, this is
+also the only choice in any case where the user is previuosly unknown to Diglias.
+* **Backend connect** - the application calls an authenticated backend channel over REST adding the attribute to the
+user. User will then be prompted to add the attribute to the Diglias profile.
 
-## API Endpoint
+### Try Frontend connect
 
-To be able to integrate with the playground the API endpoint (<https://prodtest-login.diglias.com/main-eapi/begin>) should be used. This is necessary for the playground login to work properly with the playground version of the app and the relying party configurations.
+Using the form at <https://login.diglias.com/test-eapi/> as in "Try Login" plus filling out the `Ambassador` part of the
+form, frontend connect can be emulated. Try to add `auth_rp_acme_LoyaltyNumber=1234` in `Ambassador` field to accomplish
+the task to add 1234 as loyalty number.
+
+<img src="assets/images/test-eapi-form.png" width="75%">
+
+For more information, see EAPI documentation metioned above	 under the section with `auth_rp_ATTRIBUTE`.
+
+### Try Backend connect
+
+Using the form at (<https://login.diglias.com/test-rp-mgmt/>) backend connect can be emulated. The web-form is a simple
+wrapper for the REST API call that exposes backend connect API. 
+
+This call will notifiy the user with userid `77063...` to add `acme_loyaltyNumber` to the profile. The userId is fetched
+from a previous authentication of the user in "Try Login".
+
+This is the preferred way to add and the only way to do remove of user attributes and is also the most user friendly way
+for connect.
+
+<img src="assets/images/test-rp-mgmt-form.png" width="50%">
+
+Backend connect requires a number of parameters seen in the screen dump, below is a description of each. See
+documentation for more details.
+
+| attribute       | value |
+|-----------------|-------|
+|application      |playground|
+|UserID           |The user id returned when user logs into `playground` using EAPI|
+|action           |ADD/REMOVE. Note: it is only the `acme_loyaltyNumber` that can be added and removed, the RP is not allowed any other modifications on the user.
+|attribute(name)  |`acme_loyaltyNumber`
+|attribute(value) |loyalty number of your choice
+|Username		      |`playground`	
+|password		      |`LW4eUhQkJfwJGgQU8JCT/g==`	
 
 ## Sample Code
 
-A set of sample integrations built in on different platforms:
+A sample web application that demonstrates the different possibilities exposed by the service.
 
-|Platform|Features|Repository|
-|--------|--------|----------|
-|PHP|A basic authentication flow using the “playground” RP.|<https://github.com/diglias/sample-php-app>|
-|node.js / Javascript|A basic authentication flow using the “playground” RP. The app will handle level-up/connect in the case where the Diglias Me used is missing a required attribute through the “playgroundAmbassador” RP.|<https://github.com/diglias/sample-node-app>|
+|Platform             |Repository                    |
+|-------------------- |-------------------------------------------|
+|PHP                  |<https://github.com/diglias/sample-php-app>|
+|node.js / Javascript |<https://github.com/diglias/sample-node-app>|
 
 You need sample code for a platform not listed? Let us know!
 
 ## Contact & Feedback
 
-If you have any questions, improvement suggestions or any other reason to talk to us; please don’t hesitate to contact us:
+If you have any questions, improvement suggestions or any other reason to talk to us; please don’t hesitate to contact
+us:
 
 <playground@diglias.com>
