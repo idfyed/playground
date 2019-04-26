@@ -4,19 +4,19 @@ title: 'IDFyed Playground'
 
 ## Abstract
 
-IDFyed Playground is a set of instructions, documentation and tools that can be used by a IDFyed customer during
+IDFyed Playground is a set of instructions, documentation and tools that can be used by an IDFyed customer during
 evaluation of the services. It is not a complete integration instruction. Using the playground it is possible
 to develop a web application that uses Diglias for authentication and identification of users.
 
 ## Intended Audience
 
-The IDFyed Playground is intended primarily for technically minded persons that needs to understand the technical
+The IDFyed Playground is intended primarily for technically minded persons that need to understand the technical
 structure of the Diglias service and how to integrate it in the customer environment.
 
 ## API Documentation
 
-A good starting point is to get familiar with the different integration points are through the API documentation. A
-number of concepts and terms referred to in the remainder of this document is explained in the documentation:
+A good starting point is to get familiar with the different integration points is through the API documentation. A
+number of concepts and terms referred to in the remainder of this document are explained in the documentation:
 
 - [EAPI - Authentication and Frontend connect](https://test.idfyed.com/doc-rp/eapi.jsp)
 - [RP Mgmt - Back-end connect](https://test.idfyed.com/doc-rp/rp-mgmt.jsp)
@@ -78,8 +78,8 @@ Diglias profile.
 The playground RP has been equipped with the possibility to connect the attribute `acme_loyaltyNumber` and this can be
 done in two ways.
 
-- **Frontend connect** - Adding the new parameter in the EAPI request. This is the fastest integration choice, this is
-  also the only choice in any case where the user is previously unknown to Diglias.
+- **Frontend connect** - Adding the new parameter in the EAPI request. This is the fastest integration choice and
+  also the only choice in any case where the user is previously unknown to the RP.
 - **Back-end connect** - the application calls an authenticated back-end channel over REST adding the attribute to the
   user. User will then be prompted to add the attribute to the Diglias profile.
 
