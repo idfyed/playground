@@ -3,22 +3,23 @@
 
 @import "{{ site.theme }}";
 
-@import url("https://fonts.googleapis.com/css?family=Kanit");
+@import url("https://fonts.googleapis.com/css?family=Cabin|Roboto&display=swap");
 
 body {
-	font-family: "Kanit", Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .page-header {
-	background-color: #00c579;
+	background-color: #FFC800;
 	background-image: none;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+	font-family: 'Cabin', sans-serif;
 	font-weight: bold;
-	color: #00c579;
+	color: #FFC800;
 	color: black;
 }
 
