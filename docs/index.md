@@ -23,7 +23,7 @@ number of concepts and terms referred to in the remainder of this document are e
 
 ## Install the App
 
-<a href="https://itunes.apple.com/us/app/diglias/id956829343?l=sv&ls=1&mt=8" taget="_newApp1"><img src="assets/images/appstore.svg" width="148"></a>
+<a href="https://itunes.apple.com/us/app/diglias/id956829343?l=sv&ls=1&mt=8" taget="_newApp1"><img style="padding-bottom:9px;" src="assets/images/appstore.svg" width="148"></a>
 <a href="https://play.google.com/store/apps/details?id=com.diglias.loginapp" taget="_newApp1"><img src="assets/images/google_play.svg" width="148"></a>
 
 To install the app you can either click the icons above in your browser of your device or open the App store or Play
