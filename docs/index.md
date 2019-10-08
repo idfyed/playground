@@ -1,16 +1,16 @@
 ---
-title: 'IDFyed Playground'
+title: 'Idfyed Playground'
 ---
 
 ## Abstract
 
-IDFyed Playground is a set of instructions, documentation and tools that can be used by an IDFyed customer during
+Idfyed Playground is a set of instructions, documentation and tools that can be used by an Idfyed customer during
 evaluation of the services. It is not a complete integration instruction. Using the playground it is possible
 to develop a web application that uses Idfyed for authentication and identification of users.
 
 ## Intended Audience
 
-The IDFyed Playground is intended primarily for technically minded persons that need to understand the technical
+The Idfyed Playground is intended primarily for technically minded persons that need to understand the technical
 structure of the Idfyed service and how to integrate it in the customer environment.
 
 ## API Documentation
