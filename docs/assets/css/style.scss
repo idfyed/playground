@@ -3,39 +3,46 @@
 
 @import "{{ site.theme }}";
 
-@import url("https://fonts.googleapis.com/css?family=Kanit");
+@import url("https://fonts.googleapis.com/css?family=Cabin%7CRoboto&display=swap");
 
 body {
-	font-family: "Kanit", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .page-header {
-	background-color: #00c579;
-	background-image: none;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+  background-color: #ffc800;
+  background-image: none;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
-
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
-	font-weight: bold;
-	color: #00c579;
-	color: black;
+h1.project-name {
+  font-family: "Cabin", sans-serif;
+  color: black;
+}
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  color: #ffc800;
+  color: black;
 }
 
 // Hide button and tagline from header
 .page-header {
-	.btn {
-		display: none;
-	}
+  .btn {
+    display: none;
+  }
 
-	.project-tagline {
-		display: none;
-	}
+  .project-tagline {
+    display: none;
+  }
 }
 
 // Hide maintained by and link to repo
 .site-footer-owner {
-	display: none;
+  display: none;
 }
-
-

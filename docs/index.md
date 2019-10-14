@@ -1,17 +1,17 @@
 ---
-title: 'IDFyed Playground'
+title: 'Idfyed Playground'
 ---
 
 ## Abstract
 
-IDFyed Playground is a set of instructions, documentation and tools that can be used by an IDFyed customer during
+Idfyed Playground is a set of instructions, documentation and tools that can be used by an Idfyed customer during
 evaluation of the services. It is not a complete integration instruction. Using the playground it is possible
-to develop a web application that uses Diglias for authentication and identification of users.
+to develop a web application that uses Idfyed for authentication and identification of users.
 
 ## Intended Audience
 
-The IDFyed Playground is intended primarily for technically minded persons that need to understand the technical
-structure of the Diglias service and how to integrate it in the customer environment.
+The Idfyed Playground is intended primarily for technically minded persons that need to understand the technical
+structure of the Idfyed service and how to integrate it in the customer environment.
 
 ## API Documentation
 
@@ -23,11 +23,11 @@ number of concepts and terms referred to in the remainder of this document are e
 
 ## Install the App
 
-<a href="https://itunes.apple.com/us/app/diglias/id956829343?l=sv&ls=1&mt=8" taget="_newApp1"><img src="assets/images/appstore.svg" width="148"></a>
+<a href="https://itunes.apple.com/us/app/diglias/id956829343?l=sv&ls=1&mt=8" taget="_newApp1"><img style="padding-bottom:9px;" src="assets/images/appstore.svg" width="148"></a>
 <a href="https://play.google.com/store/apps/details?id=com.diglias.loginapp" taget="_newApp1"><img src="assets/images/google_play.svg" width="148"></a>
 
 To install the app you can either click the icons above in your browser of your device or open the App store or Play
-Store App on the device and search for “Diglias”.
+Store App on the device and search for Idfyed.
 
 ## Playground Relying Party
 
@@ -36,7 +36,7 @@ production environment. The RP is the fictitious company ACME Inc.
 
 ### Relying Party Configuration
 
-The playground relying party uses Diglias for authentication.
+The playground relying party uses Idfyed for authentication.
 
 |                 | Parameter        | Value                    |
 | --------------- | ---------------- | ------------------------ |
@@ -62,7 +62,7 @@ party configurations.
 ## Try Login
 
 Using the form at <https://login.idfyed.com/test-eapi/> a login can be emulated. This webform performs an operation
-that normally would be done by the application integrating Diglias for authentication and identification.
+that normally would be done by the application integrating Idfyed for authentication and identification.
 
 In the form the CompanyName `playground`, and the key `LW4eUhQkJfwJGgQU8JCT/g==` should be entered. All other values
 can be kept as default.
@@ -73,7 +73,7 @@ can be kept as default.
 
 In some scenarios, adding an attribute to a user where the RP decides the value is required. This scenario is called a
 `connect`. For example if you join a loyalty program, the RP might want to add the loyalty program number to your
-Diglias profile.
+Idfyed profile.
 
 The playground RP has been equipped with the possibility to connect the attribute `acme_loyaltyNumber` and this can be
 done in two ways.
@@ -81,7 +81,7 @@ done in two ways.
 - **Frontend connect** - Adding the new parameter in the EAPI request. This is the fastest integration choice and
   also the only choice in any case where the user is previously unknown to the RP.
 - **Back-end connect** - the application calls an authenticated back-end channel over REST adding the attribute to the
-  user. User will then be prompted to add the attribute to the Diglias profile.
+  user. User will then be prompted to add the attribute to the Idfyed profile.
 
 ### Try Frontend connect
 
