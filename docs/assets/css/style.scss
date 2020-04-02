@@ -10,11 +10,27 @@ body {
 }
 
 .page-header {
+  color: #0e142b;
   background-color: #ffc800;
   background-image: none;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+
+.page-header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h1.project-name {
   font-family: "Cabin", sans-serif;
   color: black;
@@ -28,21 +44,24 @@ h1.project-name {
   font-family: "Cabin", sans-serif;
   font-weight: bold;
   color: #ffc800;
-  color: black;
-}
-
-// Hide button and tagline from header
-.page-header {
-  .btn {
-    display: none;
-  }
-
-  .project-tagline {
-    display: none;
-  }
+  color: #0e142b;
 }
 
 // Hide maintained by and link to repo
 .site-footer-owner {
   display: none;
+}
+
+.idfyedIcon {
+  width: 70px;
+  height: 100%;
+  margin: 20px;
+}
+
+.fillBlue {
+  fill: #0e142b;
+}
+
+.fillYellow {
+  fill: #ffc800;
 }
